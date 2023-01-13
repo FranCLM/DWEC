@@ -114,11 +114,7 @@ class Person{
         this.phone = phone;
         this.gender = gender;
     }
-    GetDescription(newName,newAge,newPhone,newGender){
-        this.name = newName;
-        this.age = newAge;
-        this.phone = newPhone;
-        this.gender = newGender;
+    GetDescription(){
         return "Me llamo " + this.name + " tengo " + this.age + " años. Mi numero de telefono es " + this.phone + " y soy " + this.gender;
     }
     SetPhone(newPhone){
@@ -136,13 +132,11 @@ class Student extends Person{
         this.studentId = studentId;
         
     }
-    GetDescription(newUniversity,newStudentId){
-        this.university = newUniversity;
-        this.studentId = newStudentId;
+    GetDescription(){
         return super.GetDescription() + "Estudio en " + this.university + "y mi ID de estudiante es: " + this.studentId;
     }
 
 }
 // https://www.youtube.com/watch?v=kdicPwRzDVw&ab_channel=JohnOrtizOrdo%C3%B1ez
 S = new Student("Aitor",28,66666,"H","Alovera",3232);
-console.log(S.GetDescription);
+console.log(S.GetDescription());
